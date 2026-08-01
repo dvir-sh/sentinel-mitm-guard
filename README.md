@@ -38,7 +38,7 @@ A security system that combines a **VPN-style IP-masking proxy**, a **MITM-based
 
 The custom two-stage visual AI engine running live on YouTube:
 
-![YouTube Ad Detection Demo](assets/demo-youtube.png)
+<img width="1920" height="847" alt="מטורף" src="https://github.com/user-attachments/assets/356c7f80-72d5-4f07-a833-9eff021badce" />
 
 > 📌 **Debug vs. Production Execution:** The screenshot above is an automated **debug image** generated during pipeline execution for visual validation. In live operation, the system doesn't draw overlays—it actively hides confirmed ad elements from the DOM in real time.
 
@@ -50,5 +50,4 @@ The custom two-stage visual AI engine running live on YouTube:
 
 > 💡 **Zero-Shot Generalization:** The custom Keras classifier was **never trained on YouTube thumbnails or layout assets**. It accurately identified and classified these elements purely by learning generalized visual features of web advertisements.
 
-<img width="1920" height="847" alt="מטורף" src="https://github.com/user-attachments/assets/356c7f80-72d5-4f07-a833-9eff021badce" />
 

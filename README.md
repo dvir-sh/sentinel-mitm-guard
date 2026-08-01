@@ -1,4 +1,4 @@
-# Secure Browsing Suite - VPN + MITM Content Filtering + Visual Ad Blocker
+# Secure Browsing Suite - VPN + MITM Threat Filtering + Visual Ad Blocker
 
 A security system that combines a **VPN-style IP-masking proxy**, a **MITM-based real-time threat scanner**, and a **Visual AI ad blocker**, wrapped in a fully automated client/server pipeline. Built for both individual users who want private, ad-free, malware-safe browsing, and for organizations that need to monitor and restrict employee internet traffic.
 

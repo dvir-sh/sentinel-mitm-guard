@@ -34,3 +34,21 @@ A security system that combines a **VPN-style IP-masking proxy**, a **MITM-based
 - **OS:** Windows
 - **Deployment:** Railway (VPS) + GitHub for CI deployment
 
+## 🎯 Visual AI Detection in Action
+
+The custom two-stage visual AI engine running live on YouTube:
+
+![YouTube Ad Detection Demo](assets/demo-youtube.png)
+
+> 📌 **Debug vs. Production Execution:** The screenshot above is an automated **debug image** generated during pipeline execution for visual validation. In live operation, the system doesn't draw overlays—it actively hides confirmed ad elements from the DOM in real time.
+
+### 🔍 How the Visual Pipeline Processes the Page:
+
+* 🟧 **Orange Boxes (Heuristic Pre-Filtering):** Bounding boxes proposed by YOLO that were **filtered out locally** (via aspect ratio, minimum size, and solid-color heuristics) *before* reaching the neural network. This eliminates unnecessary inference calls and minimizes CPU latency.
+* 🎯 **Target Ad Boxes (CNN Classification):** High-potential candidates passed to the custom Keras CNN, which correctly isolated **only** the two actual ad thumbnails while leaving all legitimate content completely untouched.
+* 🙈 **Automated DOM Hiding:** Once classified as an ad, the element is dynamically hidden in the DOM, and a `MutationObserver` is injected to ensure it stays hidden during scrolling or page re-renders.
+
+> 💡 **Zero-Shot Generalization:** The custom Keras classifier was **never trained on YouTube thumbnails or layout assets**. It accurately identified and classified these elements purely by learning generalized visual features of web advertisements.
+
+<img width="1920" height="847" alt="מטורף" src="https://github.com/user-attachments/assets/356c7f80-72d5-4f07-a833-9eff021badce" />
+

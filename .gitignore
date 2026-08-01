@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Secrets & Configs
+.env
+config.json
+
+# Virtual environments
+.venv/
+venv/
+
+# Heavy dataset images & debug outputs
+debug_images/
+dataset/raw/
+*.pt
+*.h5
